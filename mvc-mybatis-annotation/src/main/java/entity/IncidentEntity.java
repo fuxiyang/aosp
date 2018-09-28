@@ -96,4 +96,20 @@ public class IncidentEntity {
     public void setYxx(Boolean yxx) {
         this.yxx = yxx;
     }
+
+    @Override
+    public String toString() {
+        return "IncidentEntity{" +
+                "id='" + id + '\'' +
+                ", afdz='" + afdz + '\'' +
+                ", ajms='" + ajms + '\'' +
+                ", zgjg='" + zgjg + '\'' +
+                ", ssdq='" + ssdq + '\'' +
+                ", lasj=" + lasj +
+                ", cjsj=" + cjsj +
+                ", gxsj=" + gxsj +
+                ", czz='" + czz + '\'' +
+                ", yxx=" + yxx +
+                '}';
+    }
 }

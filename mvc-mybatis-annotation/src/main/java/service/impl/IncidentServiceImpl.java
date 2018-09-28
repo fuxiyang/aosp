@@ -30,4 +30,8 @@ public class IncidentServiceImpl implements IncidentService {
 
         mapper.insert(entity);
     }
+
+    public IncidentEntity selectById(String id) {
+        return mapper.selectById(id);
+    }
 }

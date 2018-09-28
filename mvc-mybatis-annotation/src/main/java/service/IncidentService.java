@@ -9,4 +9,6 @@ import entity.IncidentEntity;
  */
 public interface IncidentService {
     void insert(IncidentEntity incidentEntity);
+
+    IncidentEntity selectById(String id);
 }

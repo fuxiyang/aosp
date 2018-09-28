@@ -61,14 +61,18 @@ public class Test {
     @org.junit.Test
     public void testIncident(){
         IncidentService service=context.getBean(IncidentService.class);
-        IncidentEntity entity=new IncidentEntity();
-        entity.setAfdz("斜土街道");
-        entity.setAjms("公寓起火，人员密集，可见火光");
-        entity.setLasj(System.currentTimeMillis());
-        entity.setId("as26899312de564g85sde");
-        entity.setYxx(true);
-        entity.setCjsj(System.currentTimeMillis());
-        entity.setGxsj(System.currentTimeMillis());
-        service.insert(entity);
+//        IncidentEntity entity=new IncidentEntity();
+//        entity.setAfdz("斜土街道");
+//        entity.setAjms("公寓起火，人员密集，可见火光");
+//        entity.setLasj(System.currentTimeMillis());
+//        entity.setId("as26899312de564g85sde");
+//        entity.setYxx(true);
+//        entity.setCjsj(System.currentTimeMillis());
+//        entity.setGxsj(System.currentTimeMillis());
+//        service.insert(entity);
+
+        //selectById
+        IncidentEntity entity=service.selectById("as26899312de564g85sde");
+        System.out.println(entity);
     }
 }

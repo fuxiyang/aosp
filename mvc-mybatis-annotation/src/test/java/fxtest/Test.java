@@ -74,7 +74,7 @@ public class Test {
 //        entity.setCjsj(System.currentTimeMillis());
 //        entity.setGxsj(System.currentTimeMillis());
 //        service.insert(entity);
-
+i
 //        //selectById
 //        IncidentEntity entity=service.selectById("as26899312de564g85sde");
 //        System.out.println(entity);

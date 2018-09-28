@@ -62,10 +62,10 @@ public class Test {
     public void testIncident(){
         IncidentService service=context.getBean(IncidentService.class);
         IncidentEntity entity=new IncidentEntity();
-        entity.setAfdz("和平街道");
-        entity.setAjms("起火,有浓烟");
+        entity.setAfdz("斜土街道");
+        entity.setAjms("公寓起火，人员密集，可见火光");
         entity.setLasj(System.currentTimeMillis());
-        entity.setId("as26899312de564g85sd5");
+        entity.setId("as26899312de564g85sde");
         entity.setYxx(true);
         entity.setCjsj(System.currentTimeMillis());
         entity.setGxsj(System.currentTimeMillis());

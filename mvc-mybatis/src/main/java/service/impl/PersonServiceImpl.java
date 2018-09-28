@@ -16,11 +16,15 @@ import service.PersonService;
  */
 @Component
 public class PersonServiceImpl implements PersonService {
-    @Autowired
     private SqlSessionFactory sqlSessionFactory;
     private SqlSession sqlSession;
-    @Autowired
     private PersonEntityMapper personEntityMapper;
+    @Autowired
+    public PersonServiceImpl(SqlSessionFactory sqlSessionFactory, PersonEntityMapper personEntityMapper) {
+        this.sqlSessionFactory = sqlSessionFactory;
+        this.personEntityMapper = personEntityMapper;
+        this.sqlSession=sqlSessionFactory.openSession();
+    }
 
     public void insert(PersonEntity personEntity) {
         try {

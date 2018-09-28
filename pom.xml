@@ -120,6 +120,12 @@
                 <version>1.4.197</version>
                 <scope>test</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/MySQL/mysql-connector-java -->
+            <dependency>
+                <groupId>MySQL</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.40</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

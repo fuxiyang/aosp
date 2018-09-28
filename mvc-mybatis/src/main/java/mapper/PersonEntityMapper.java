@@ -11,6 +11,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface PersonEntityMapper {
-    @Insert("insert into personEntity (name,age,address) values(#{name},#{age},#{address})")
+    @Insert("insert into persons (name,age,address) values(#{name},#{age},#{address})")
     void insert(PersonEntity person);
 }

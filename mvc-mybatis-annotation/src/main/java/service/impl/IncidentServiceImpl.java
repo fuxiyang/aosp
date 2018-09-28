@@ -1,7 +1,7 @@
 package service.impl;
 
 import entity.IncidentEntity;
-import mapper.IncidentMapper;
+import mapper.simple.IncidentMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

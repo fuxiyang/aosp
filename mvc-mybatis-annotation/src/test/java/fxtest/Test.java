@@ -46,8 +46,8 @@ public class Test {
     @org.junit.Test
     public void testUser(){
         User user=new User();
-        user.setId("3");
-        user.setName("漳卅三年");
+        user.setId("4");
+        user.setName("测试");
         UserService userService=context.getBean(UserService.class);
         userService.insert(user);
         System.out.println("///////////////");

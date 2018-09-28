@@ -3,6 +3,7 @@ package mapper;
 import entity.PersonEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * 描述：人员类Mapper
@@ -13,4 +14,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface PersonEntityMapper {
     @Insert("insert into persons (name,age,address) values(#{name},#{age},#{address})")
     void insert(PersonEntity person);
+    @Select("select * from personEntity where id=#{id}")
+    PersonEntity findPerson(String id);
 }

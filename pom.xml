@@ -14,17 +14,25 @@
         <springframework.version>5.0.8.RELEASE</springframework.version>
     </properties>
     <modules>
-        <module>mvc-mybatis</module>
+        <module>mvc-mybatis-annotation</module>
     </modules>
-
+    <!--公共的依赖-->
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <!--单元测试-->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <scope>test</scope>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>junit</groupId>-->
+                <!--<artifactId>junit</artifactId>-->
+                <!--<scope>test</scope>-->
+            <!--</dependency>-->
         <!--spring-->
             <dependency>
                 <groupId>org.springframework</groupId>

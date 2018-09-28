@@ -14,6 +14,6 @@ import org.apache.ibatis.annotations.Select;
 public interface PersonEntityMapper {
     @Insert("insert into persons (name,age,address) values(#{name},#{age},#{address})")
     void insert(PersonEntity person);
-    @Select("select * from personEntity where id=#{id}")
+    @Select("select * from persons where id=#{id}")
     PersonEntity findPerson(String id);
 }

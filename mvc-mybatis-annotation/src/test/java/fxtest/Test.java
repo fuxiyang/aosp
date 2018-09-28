@@ -1,12 +1,14 @@
 package fxtest;
 
 import config.AppConfig;
+import entity.IncidentEntity;
 import entity.PersonEntity;
 import entity.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import service.IncidentService;
 import service.PersonService;
 import service.UserService;
 
@@ -51,5 +53,22 @@ public class Test {
         UserService userService=context.getBean(UserService.class);
         userService.insert(user);
         System.out.println("///////////////");
+    }
+
+    /**
+     * 测试警情表
+     */
+    @org.junit.Test
+    public void testIncident(){
+        IncidentService service=context.getBean(IncidentService.class);
+        IncidentEntity entity=new IncidentEntity();
+        entity.setAfdz("和平街道");
+        entity.setAjms("起火,有浓烟");
+        entity.setLasj(System.currentTimeMillis());
+        entity.setId("as26899312de564g85sd5");
+        entity.setYxx(true);
+        entity.setCjsj(System.currentTimeMillis());
+        entity.setGxsj(System.currentTimeMillis());
+        service.insert(entity);
     }
 }

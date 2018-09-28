@@ -8,6 +8,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.transaction.annotation.Transactional;
 import service.IncidentService;
 import service.PersonService;
 import service.UserService;
@@ -18,26 +19,28 @@ import service.UserService;
  * @author YangFuXi Date Time 2018/8/30 15:14
  */
 public class Test {
-    private static final Log logger=LogFactory.getLog(Test.class);
+    private static final Log logger = LogFactory.getLog(Test.class);
     private static AnnotationConfigApplicationContext context = null;
 
     @Before
-    public void before(){
-        context=new AnnotationConfigApplicationContext(AppConfig.class);
+    public void before() {
+        context = new AnnotationConfigApplicationContext(AppConfig.class);
         System.out.println("测试已启动");
     }
+
     @After
-    public void after(){
-        if (context!=null){
+    public void after() {
+        if (context != null) {
             context.close();
         }
         System.out.println("测试已关闭");
     }
+
     @org.junit.Test
-    public void testMybatis(){
+    public void testMybatis() {
         System.out.println("........");
-        PersonService service=context.getBean(PersonService.class);
-        PersonEntity person=new PersonEntity();
+        PersonService service = context.getBean(PersonService.class);
+        PersonEntity person = new PersonEntity();
         person.setName("张三");
         person.setAge(21);
         person.setAddress("sdfasdf");
@@ -46,11 +49,11 @@ public class Test {
     }
 
     @org.junit.Test
-    public void testUser(){
-        User user=new User();
+    public void testUser() {
+        User user = new User();
         user.setId("4");
         user.setName("测试");
-        UserService userService=context.getBean(UserService.class);
+        UserService userService = context.getBean(UserService.class);
         userService.insert(user);
         System.out.println("///////////////");
     }
@@ -58,9 +61,10 @@ public class Test {
     /**
      * 测试警情表
      */
+//    @Transactional
     @org.junit.Test
-    public void testIncident(){
-        IncidentService service=context.getBean(IncidentService.class);
+    public void testIncident() {
+        IncidentService service = context.getBean(IncidentService.class);
 //        IncidentEntity entity=new IncidentEntity();
 //        entity.setAfdz("斜土街道");
 //        entity.setAjms("公寓起火，人员密集，可见火光");
@@ -71,8 +75,14 @@ public class Test {
 //        entity.setGxsj(System.currentTimeMillis());
 //        service.insert(entity);
 
-        //selectById
-        IncidentEntity entity=service.selectById("as26899312de564g85sde");
-        System.out.println(entity);
+//        //selectById
+//        IncidentEntity entity=service.selectById("as26899312de564g85sde");
+//        System.out.println(entity);
+//        //update
+//        entity.setCzz("测试");
+//        service.update(entity);
+
+        //delete
+//        service.remove("as26899312de564g85sde");
     }
 }

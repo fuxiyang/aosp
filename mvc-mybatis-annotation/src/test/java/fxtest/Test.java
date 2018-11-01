@@ -59,12 +59,13 @@ public class Test {
     }
 
     /**
-     * 测试警情表
+     * 测试简单的增删改查  警情表
      */
 //    @Transactional
     @org.junit.Test
     public void testIncident() {
         IncidentService service = context.getBean(IncidentService.class);
+        //增加
 //        IncidentEntity entity=new IncidentEntity();
 //        entity.setAfdz("斜土街道");
 //        entity.setAjms("公寓起火，人员密集，可见火光");
@@ -75,6 +76,7 @@ public class Test {
 //        entity.setGxsj(System.currentTimeMillis());
 //        service.insert(entity);
 
+        //查询
 //        //selectById
 //        IncidentEntity entity=service.selectById("as26899312de564g85sde");
 //        System.out.println(entity);
@@ -82,7 +84,11 @@ public class Test {
 //        entity.setCzz("测试");us
 //        service.update(entity);
 
+        //删除
         //delete
 //        service.remove("as26899312de564g85sde");
+
+        //修改
+
     }
 }

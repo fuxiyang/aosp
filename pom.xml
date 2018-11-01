@@ -15,6 +15,8 @@
     </properties>
     <modules>
         <module>mvc-mybatis-annotation</module>
+        <module>httpUtils</module>
+        <module>fx_dal</module>
     </modules>
     <!--公共的依赖-->
     <dependencies>
@@ -35,6 +37,12 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -145,6 +153,13 @@
                 <groupId>MySQL</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.40</version>
+            </dependency>
+            <!--#######httpUtils############-->
+            <!--HTTP-WS-->
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-client</artifactId>
+                <version>2.25.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

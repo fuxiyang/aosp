@@ -1,14 +1,12 @@
 package fxtest;
 
 import config.AppConfig;
-import entity.IncidentEntity;
 import entity.PersonEntity;
 import entity.User;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.transaction.annotation.Transactional;
 import service.IncidentService;
 import service.PersonService;
 import service.UserService;

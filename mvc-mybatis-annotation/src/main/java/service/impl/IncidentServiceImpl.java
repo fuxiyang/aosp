@@ -1,6 +1,6 @@
 package service.impl;
 
-import entity.IncidentEntity;
+import entity.simple.IncidentEntity;
 import mapper.simple.IncidentMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

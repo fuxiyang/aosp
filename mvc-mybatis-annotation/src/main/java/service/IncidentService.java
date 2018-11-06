@@ -1,6 +1,6 @@
 package service;
 
-import entity.IncidentEntity;
+import entity.simple.IncidentEntity;
 
 /**
  * 描述：警情服务

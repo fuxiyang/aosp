@@ -1,9 +1,7 @@
 package mapper.simple;
 
-import entity.IncidentEntity;
+import entity.simple.IncidentEntity;
 import org.apache.ibatis.annotations.*;
-
-import java.util.List;
 
 /**
  * 描述：警情实体mapper
@@ -20,7 +18,7 @@ public interface IncidentMapper {
     void insert(IncidentEntity entity);
 
     /**
-     * 根据ID查询警情详情
+     * 查询 根据ID查询警情详情
      * @param id 警情ID
      * @return 返回警情详情
      */
@@ -28,7 +26,7 @@ public interface IncidentMapper {
     IncidentEntity selectById(String id);
 
     /**
-     * 更新警情信息
+     * 更新 更新警情信息
      * @param entity 需要更新的警情信息
      */
     @Update("update jcj_ajxx" +

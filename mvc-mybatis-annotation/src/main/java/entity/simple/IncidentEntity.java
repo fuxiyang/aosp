@@ -1,4 +1,4 @@
-package entity;
+package entity.simple;
 
 /**
  * 描述：案件信息表

@@ -8,8 +8,8 @@ package base;
 public class BaseEntity {
     private String id;
     private String czz;
-    private long cjsj;
-    private long gxsj;
+    private Long cjsj;
+    private Long gxsj;
     private char yxx;
 
     public String getId() {
@@ -28,19 +28,19 @@ public class BaseEntity {
         this.czz = czz;
     }
 
-    public long getCjsj() {
+    public Long getCjsj() {
         return cjsj;
     }
 
-    public void setCjsj(long cjsj) {
+    public void setCjsj(Long cjsj) {
         this.cjsj = cjsj;
     }
 
-    public long getGxsj() {
+    public Long getGxsj() {
         return gxsj;
     }
 
-    public void setGxsj(long gxsj) {
+    public void setGxsj(Long gxsj) {
         this.gxsj = gxsj;
     }
 
